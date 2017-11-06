@@ -1,0 +1,62 @@
+<form ng-submit="twit.analyzeForm(searchData);">
+
+	<div class="form-group">
+		<label for="search">Search field</label>
+		<input ng-model="searchData.keyword" type="text" class="form-control" id="search" aria-describedby="searchHelp" placeholder="Search tweets using keyword...">
+		<!--<small id="searchHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+	</div>
+
+	<button type="submit" class="btn btn-primary">Start</button>
+
+</form>
+
+<div class="bs-docs-section" style="margin-top: 30px">
+
+	<div class="container">
+
+		<div class="row" ng-repeat="sentiment in twit.responses" style="margin: 15px">
+
+			<div class="card text-white bg-primary col-md-12" ng-if="sentiment.sentiment.sentiment.document.label == 'neutral'">
+				<div class="card-body">
+					<h4 class="card-header">{{ sentiment.sentiment.sentiment.document.label }} ({{ sentiment.sentiment.sentiment.document.score }})</h4>
+					<blockquote class="card-blockquote">
+						<p>{{ sentiment.tweet }}</p>
+						<footer>
+							<img src="{{ sentiment.user.profile_image_url }}"></img>
+							<cite title="Source Title">{{ sentiment.user.name }}</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+
+			<div class="card text-white bg-danger col-md-12" ng-if="sentiment.sentiment.sentiment.document.label == 'negative'">
+				<div class="card-body">
+					<h4 class="card-header">{{ sentiment.sentiment.sentiment.document.label }} ({{ sentiment.sentiment.sentiment.document.score }})</h4>
+					<blockquote class="card-blockquote">
+						<p>{{ sentiment.tweet }}</p>
+						<footer>
+							<img src="{{ sentiment.user.profile_image_url }}"></img>
+							<cite title="Source Title">{{ sentiment.user.name }}</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+
+			<div class="card text-white bg-success col-md-12" ng-if="sentiment.sentiment.sentiment.document.label == 'positive'">
+				<div class="card-body">
+					<h4 class="card-header">{{ sentiment.sentiment.sentiment.document.label }} ({{ sentiment.sentiment.sentiment.document.score }})</h4>
+					<blockquote class="card-blockquote">
+						<p>{{ sentiment.tweet }}</p>
+						<footer>
+							<img src="{{ sentiment.user.profile_image_url }}"></img>
+							<cite title="Source Title">{{ sentiment.user.name }}</cite>
+						</footer>
+					</blockquote>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</div>

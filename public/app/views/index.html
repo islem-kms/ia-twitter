@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<base href="/">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>SenTwitter - IBM Watson</title>
+
+	<!-- Bootstrap -->
+	<!--<link href="assets/css/bootswatch-papper.min.css" rel="stylesheet">-->
+	<link href="assets/css/bootswatch-materia.min.css" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/angular-route.js"></script>
+
+
+	<script src="app/app.js"></script>
+	<script src="app/routes.js"></script>
+
+	<script src="app/controllers/twitterCtrl.js"></script>
+
+</head>
+<body ng-app="twitterApp">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+	<a class="navbar-brand" href="/">IBM Watson</a>
+</nav>
+
+<div class="container">
+
+	<div class="starter-template">
+		<h1>Natural Language Understanding (NLU)</h1>
+		<p class="lead">
+			Search tweets using a keyword,<br>
+			and analyze the users sentiments
+		</p>
+	</div>
+
+	<div ng-view></div>
+
+</div><!-- /.container -->
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>

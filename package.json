@@ -1,0 +1,38 @@
+{
+  "name": "sentwitter",
+  "version": "1.0.0",
+  "description": "Extracts tweets and analyze their sentiment using IBM Watson",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/islem-kms/ia-twitter.git"
+  },
+  "keywords": [
+    "NLP",
+    "NLU",
+    "IBM",
+    "Watson",
+    "Twitter",
+    "Sentiment",
+    "analysis",
+    "Emotion",
+    "recognition"
+  ],
+  "author": "Islem Khemissi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/islem-kms/ia-twitter/issues"
+  },
+  "homepage": "https://github.com/islem-kms/ia-twitter#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "twitter": "^1.7.1",
+    "watson-developer-cloud": "^2.42.0"
+  }
+}
