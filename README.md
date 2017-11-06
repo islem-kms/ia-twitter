@@ -1,4 +1,5 @@
 # Twitter sentiment analysis with IBM Watson
+![Image of Yaktocat](https://github.com/islem-kms/ia-twitter/blob/master/Screenshot.png)
 
 ### Install
 
